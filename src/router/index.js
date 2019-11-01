@@ -4,8 +4,10 @@ import Router from 'vue-router';
 import Routerrc from './router.json';
 
 // Create Vue router and using it.
+const routingConfs = createRouteConfigs(Routerrc);
 export default new Router({
-  routes: createRouteConfigs(Routerrc)
+  mode: 'history',
+  routes: routingConfs
 });
 
 Vue.use(Router);
@@ -25,7 +27,6 @@ function createRouteConfigs (routerrc) {
       configArr.push(routeConfig);
     }
   }
-
   return configArr;
 }
 
