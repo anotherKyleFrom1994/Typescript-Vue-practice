@@ -26,4 +26,4 @@ a {
 }
 </style>
 
-<script src="./main_page.js"/>
+<script src="./main_page.ts"/>

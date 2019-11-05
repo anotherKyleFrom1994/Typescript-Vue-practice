@@ -18,7 +18,7 @@
     font-weight: normal;
   }
 
-  ul {
+  ul {`
     list-style-type: none;
     padding: 0;
   }
@@ -33,4 +33,4 @@
   } */
 </style>
 
-<script src="./list_item.js" />
+<script src="./list_item.ts" />

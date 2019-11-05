@@ -21,11 +21,10 @@ export default {
     init: function () {
       this.createItemContent();
     },
-    createItemContent: function (title, subTitle, isLink, target, href, displayWording) {
+    createItemContent: function () {
       // if (jsonObj === null || jsonObj === undefined) {
       //   throw new Exception();
       // }
-      JsonObj(title, subTitle, isLink, target, href, displayWording);
       // this.title = jsonObj.title;
       // this.subTitle = jsonObj.subTitle;
       // this.isLink = jsonObj.isLink;
@@ -37,12 +36,20 @@ export default {
 };
 
 class JsonObj {
-  constructor (title, subTitle, isLink, target, href, displayWording) {
+  title: String;
+  subTitle: String;
+  isLink: Boolean;
+  target: String;
+  href: String;
+  displayWording: String;
+
+  constructor(title: String, subTitle: String, isLink: Boolean, target: String, href: String, displayWording: String) {
     this.title = title;
     this.subTitle = subTitle;
     this.isLink = isLink;
-    this.target = target === undefined ? this.target : target;
+    this.target = target;
     this.href = href;
     this.displayWording = displayWording;
   }
+
 }

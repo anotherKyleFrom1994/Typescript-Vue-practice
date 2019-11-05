@@ -1,12 +1,11 @@
-'use strict';
-import Vue from 'vue';
-import Router from 'vue-router';
-import Routerrc from './router.json';
+import Vue from "vue";
+import Router from "vue-router";
+import Routerrc from "./router.json";
 
 // Create Vue router and using it.
 const routingConfs = createRouteConfigs(Routerrc);
 export default new Router({
-  mode: 'history',
+  mode: "history",
   routes: routingConfs
 });
 
