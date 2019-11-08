@@ -1,0 +1,12 @@
+[{
+    "path": "/",
+    "description": "MainPage",
+    "sourcePath": "pages/MainPage.vue",
+    "children": []
+  },
+  {
+    "path": "*",
+    "description": "exceptionCather",
+    "sourcePath": "pages/MainPage.vue"
+  }
+]

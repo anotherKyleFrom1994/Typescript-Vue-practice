@@ -37,33 +37,6 @@
     "typescript": "~3.5.3",
     "vue-template-compiler": "^2.6.10"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/standard",
-      "@vue/typescript"
-    ],
-    "rules": {
-      "generator-star-spacing": "off",
-      "semi": ["error", "always"]
-    },
-    "parserOptions": {
-      "parser": "@typescript-eslint/parser"
-    },
-    "overrides": [{
-      "files": [
-        "**/__tests__/*.{j,t}s?(x)",
-        "**/tests/unit/**/*.spec.{j,t}s?(x)"
-      ],
-      "env": {
-        "jest": true
-      }
-    }]   
-  },
   "postcss": {
     "plugins": {
       "autoprefixer": {}

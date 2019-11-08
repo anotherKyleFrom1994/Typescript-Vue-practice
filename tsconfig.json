@@ -9,6 +9,7 @@
     "experimentalDecorators": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
@@ -36,5 +37,9 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+
+  "noUnusedLocals": true,
+  "noUnusedParameters": true
+
 }
