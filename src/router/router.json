@@ -1,12 +1,14 @@
-[{
-    "path": "/",
-    "description": "MainPage",
-    "sourcePath": "pages/MainPage.vue",
-    "children": []
+[
+  {
+    "path": "/about",
+    "name": "about",
+    "webpackChunkName": "",
+    "sourcePath": "../views/About.vue"
   },
   {
-    "path": "*",
-    "description": "exceptionCather",
-    "sourcePath": "pages/MainPage.vue"
-  }
+  "path": "*",
+  "name": "exceptionCather",
+  "webpackChunkName": "",
+  "sourcePath": "../views/MainPage.vue"
+}
 ]
