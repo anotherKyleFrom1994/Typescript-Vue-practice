@@ -1,16 +1,21 @@
 <template>
-  <div class="listItem">
-    <h1>{{ title }}</h1>
+  <div class="login">
+    login
+    <!-- <h1>{{ title }}</h1>
     <h2>{{ subTitle }}</h2>
     <ul>
       <li>
         <a v-if="isLink" :target="target" :href="href">{{ displayWording }}</a>
         {{ displayWording }}
       </li>
-    </ul>
+    </ul> -->
+    <router-link to="/about"> </router-link>
+    <router-view></router-view>
   </div>
 </template>
-<script src="./ListItem.ts" />
+
+<script lang="ts" src="./Login.ts"/>
+
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   /* h1,

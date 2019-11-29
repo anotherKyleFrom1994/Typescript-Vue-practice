@@ -1,3 +1,4 @@
+import { Component, Vue } from 'vue-property-decorator';
 // if (jsonObj === null || jsonObj === undefined) {
 //   throw new Exception();
 // }
@@ -24,3 +25,5 @@
 //     this.href = href;
 //     this.displayWording = displayWording;
 //   }
+
+export default Vue;

@@ -1,14 +1,19 @@
-[
-  {
+[{
     "path": "/about",
     "name": "about",
-    "webpackChunkName": "",
-    "sourcePath": "../views/About.vue"
+    "webpackChunkName": "about",
+    "sourcePath": "views/About.vue"
   },
   {
-  "path": "*",
-  "name": "exceptionCather",
-  "webpackChunkName": "",
-  "sourcePath": "../views/MainPage.vue"
-}
+    "path": "/login",
+    "name": "login",
+    "webpackChunkName": "generic",
+    "sourcePath": "views/generic/login/Login.vue"
+  },
+  {
+    "path": "*",
+    "name": "exceptionCather",
+    "webpackChunkName": "exception",
+    "sourcePath": "views/Home.vue"
+  }
 ]

@@ -1,4 +1,6 @@
-var OFF = 0, WARN = 1, ERROR = 2;
+var OFF = 0,
+  WARN = 1,
+  ERROR = 2;
 
 module.exports = {
   "root": true,
@@ -13,11 +15,21 @@ module.exports = {
     "@vue/typescript"
   ],
   "rules": {
-    "indent": [WARN],
-    "strict": [ ERROR, "never" ],
+    "indent": [OFF],
+    "strict": [ERROR, "never"],
     "space-in-parens": OFF,
     "no-use-before-define": ERROR,
-    "semi": ["error", "always"]
+    "padded-blocks": OFF,
+    "semi": [WARN, "always"],
+    "space-before-function-paren": OFF,
+    // 'vue/max-attributes-per-line': [ERROR, {
+    //   'singleline': 3,
+    //   'multiline': {
+    //     'max': 1,
+    //     'allowFirstLine': true
+    //   }
+    // }],
+    // 'vue/script-indent': [ERROR, 2, { 'baseIndent': 1 }]
   },
   "parserOptions": {
     "parser": "@typescript-eslint/parser"

@@ -1,12 +1,13 @@
 import Vue from 'vue';
-import VueRouter, {
-  RouteConfig
-} from 'vue-router';
+import VueRouter, { RouteConfig }
+from 'vue-router';
 import Home from '../views/Home.vue';
-import routerrcs from './router.json';
+import Jsonrc from './router.json';
+
 Vue.use(VueRouter);
 
 const routes: RouteConfig[] = [{
+  // Static resources which are loaded at first.
   path: '/',
   name: 'home',
   component: Home
@@ -15,9 +16,15 @@ const routes: RouteConfig[] = [{
 // route level code-splitting
 // this generates a separate chunk (about.[hash].js) for this route
 // which is lazy-loaded when the route is visited.
-const routerJson: Routerrc[] = JSON.parse(JSON.stringify(routerrcs));
-routes.concat(createRouteConfigs(routerJson));
+const routerJson: Routerrc[] = JSON.parse(JSON.stringify(Jsonrc));
+const routeConfs = createRouteConfigs(routerJson);
+for (let index in routeConfs) {
+  if (routeConfs[index] !== null) {
+    routes.push(routeConfs[index]);
+  }
+}
 
+// Define the json object that are loaded.
 interface Routerrc {
   path: string;
   name: string;
@@ -25,7 +32,7 @@ interface Routerrc {
   sourcePath: string;
 }
 
-// Getting all configurations from router.json.
+// Getting all configurations from 'router.json'.
 function createRouteConfigs (routerrcs: Routerrc[]): RouteConfig[] {
   let configArr: RouteConfig[] = [];
 
@@ -40,28 +47,19 @@ function createRouteConfigs (routerrcs: Routerrc[]): RouteConfig[] {
       let routeConfig: RouteConfig = {
         path: routerrc.path,
         name: routerrc.name,
-        component: < () => Promise < typeof import('*.vue') >> getComponentByPath(routerrc.sourcePath, routerrc.webpackChunkName)
+        component: () => import( /* webpackChunkName: "`${routerrc.webpackChunkName}`" */ `@/${routerrc.sourcePath}`)
       };
 
       configArr.push(routeConfig);
     }
   }
   return configArr;
-}
-
-// Dynamically import components using component names in router.json.
-function getComponentByPath (sourcePath: string, webpackChunkName ? : string): ((value: any) => any) | null | undefined {
-  if (sourcePath !== undefined && webpackChunkName !== undefined) {
-    return () => import( /* webpackChunkName: "`${webpackChunkName}`" */ `${sourcePath}`);
-  } else if (sourcePath !== undefined) {
-    return () => import(`${sourcePath}`);
-  }
-}
+};
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes: routes
 });
 
 export default router;
