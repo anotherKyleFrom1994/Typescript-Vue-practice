@@ -4,7 +4,7 @@
     <h2>{{ subTitle }}</h2>
     <ul>
       <li>
-        <a v-if="isLink" :target="target" :href="href">{{ displayWording }}</a>
+        <a v-if="target" :target="target" :href="href">{{ displayWording }}</a>
         {{ displayWording }}
       </li>
     </ul>

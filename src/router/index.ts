@@ -1,8 +1,7 @@
 import Vue from 'vue';
-import VueRouter, { RouteConfig }
-from 'vue-router';
+import VueRouter, { RouteConfig } from 'vue-router';
 import Home from '../views/Home.vue';
-import Jsonrc from './router.json';
+import { IRouterCustOpt, routerOptions } from './routerrc';
 
 Vue.use(VueRouter);
 
@@ -16,24 +15,15 @@ const routes: RouteConfig[] = [{
 // route level code-splitting
 // this generates a separate chunk (about.[hash].js) for this route
 // which is lazy-loaded when the route is visited.
-const routerJson: Routerrc[] = JSON.parse(JSON.stringify(Jsonrc));
-const routeConfs = createRouteConfigs(routerJson);
+const routeConfs = createRouteConfigs(routerOptions);
 for (let index in routeConfs) {
   if (routeConfs[index] !== null) {
     routes.push(routeConfs[index]);
   }
 }
 
-// Define the json object that are loaded.
-interface Routerrc {
-  path: string;
-  name: string;
-  webpackChunkName: string;
-  sourcePath: string;
-}
-
 // Getting all configurations from 'router.json'.
-function createRouteConfigs (routerrcs: Routerrc[]): RouteConfig[] {
+function createRouteConfigs (routerrcs: IRouterCustOpt[]): RouteConfig[] {
   let configArr: RouteConfig[] = [];
 
   if (routerrcs === null || routerrcs === undefined) {
@@ -43,11 +33,10 @@ function createRouteConfigs (routerrcs: Routerrc[]): RouteConfig[] {
   for (let index in routerrcs) {
     if (index !== null) {
       let routerrc = routerrcs[index];
-
       let routeConfig: RouteConfig = {
         path: routerrc.path,
         name: routerrc.name,
-        component: () => import( /* webpackChunkName: "`${routerrc.webpackChunkName}`" */ `@/${routerrc.sourcePath}`)
+        component: () => import( /* webpackChunkName: '`${routerrc.webpackChunkName}`' */ `@/${routerrc.sourcePath}`)
       };
 
       configArr.push(routeConfig);

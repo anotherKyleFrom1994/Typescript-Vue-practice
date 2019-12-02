@@ -1,29 +1,47 @@
-import { Component, Vue } from 'vue-property-decorator';
-// if (jsonObj === null || jsonObj === undefined) {
-//   throw new Exception();
-// }
-// this.title = jsonObj.title;
-// this.subTitle = jsonObj.subTitle;
-// this.isLink = jsonObj.isLink;
-// this.target = jsonObj.target === undefined ? this.target : jsonObj.target;
-// this.href = jsonObj.href;
-// this.displayWording = jsonObj.displayWording;
+import { Component, Vue, Prop, Watch, Emit } from 'vue-property-decorator';
 
-// class JsonObj {
-//   title: string;
-//   subTitle: string;
-//   isLink: boolean;
-//   target: string;
-//   href: string;
-//   displayWording: string;
+interface IListItem {
+  title ? : string;
+  subTitle ? : string;
+  isLink: boolean;
+  target ? : string;
+  href ? : string;
+  displayWording ? : string;
+}
 
-//   constructor(title: string, subTitle: string, isLink: boolean, target: string, href: string, displayWording: string) {
-//     this.title = title;
-//     this.subTitle = subTitle;
-//     this.isLink = isLink;
-//     this.target = target;
-//     this.href = href;
-//     this.displayWording = displayWording;
+@Component
+export default class ListItem extends Vue {
+  @Prop() private title!: string;
+  @Prop() private subTitle!: string;
+  @Prop() private target!: string;
+  @Prop() private href!: string;
+  @Prop() private displayWording!: string;
+
+//   constructor() {
+//     super();
+//     this.title = '';
+//     this.subTitle = '';
+//     this.target = '';
+//     this.href = '';
+//     this.displayWording = '';
 //   }
 
-export default Vue;
+  // @Watch('phoneNum') onPhoneNumChanged(previous: string, after: string) {};
+
+  // @Emit('childMethod')
+  // handler() {
+  //   // do somthing
+  // }
+
+  created() {
+    this.init();
+  };
+
+  beforeMount() {};
+
+  mounted() {};
+
+  private init() {
+
+  };
+};

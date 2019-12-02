@@ -15,6 +15,15 @@ module.exports = {
         return options;
       });
 
+      config.module
+      .rule('tsx')
+      .use('ts-loader')
+      .loader('ts-loader')
+      .tap(options => {
+        options.allowTsInNodeModules = true;
+        return options;
+      });
+
     config.module
       .rule('eslint')
       .use('eslint-loader')

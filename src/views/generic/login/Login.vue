@@ -1,3 +1,4 @@
+
 <template>
   <div class="login">
     login
@@ -9,11 +10,11 @@
         {{ displayWording }}
       </li>
     </ul> -->
-    <router-link to="/about"> </router-link>
+    <router-link to="/about">123123 </router-link>
     <router-view></router-view>
+    <ListItem title="bbbbbbbbb"/>
   </div>
 </template>
-
 <script lang="ts" src="./Login.ts"/>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
