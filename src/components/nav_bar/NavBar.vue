@@ -14,7 +14,4 @@
   </v-app-bar>
 </template>
 
-<script lang="ts">
-   import script from './NavBar';
-   export default script;
-</script>
+<script lang="ts" src="./NavBar.ts"/>

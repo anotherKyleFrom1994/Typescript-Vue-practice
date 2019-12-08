@@ -3,10 +3,10 @@
     <h1>{{ title }}</h1>
     <h2>{{ subTitle }}</h2>
     <ul>
-      <li>
-        <a v-if="target" :target="target" :href="href">{{ displayWording }}</a>
-        {{ displayWording }}
+      <li v-if="target">
+        <a :target="target" :href="href"> {{ displayWording }} </a>
       </li>
+      <li v-if="!target"> {{ displayWording }} </li>
     </ul>
   </div>
 </template>
@@ -33,7 +33,4 @@
   } */
 </style>
 
-<script lang="ts">
-  import script from './ListItem';
-  export default script;
-</script>
+<script lang="ts" src="./ListItem.ts" />

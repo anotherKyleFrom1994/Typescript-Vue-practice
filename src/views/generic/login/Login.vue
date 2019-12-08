@@ -27,9 +27,9 @@
               </v-toolbar>
               <v-card-text>
                 <v-form>
-                  <v-text-field v-model="username" :rules="[checkColumn(username, 'username')]" label="Login" name="login" prepend-icon="person" type="text"></v-text-field>
+                  <v-text-field v-model="username" :rules="[checkColumn(username, loginColType.Username)]" label="Login" prepend-icon="person" type="text"></v-text-field>
 
-                  <v-text-field v-model="password" :rules="[checkColumn(password, 'password')]" id="password" label="Password" name="password" prepend-icon="lock" type="password"></v-text-field>
+                  <v-text-field v-model="password" :rules="[checkColumn(password, loginColType.Password)]" label="Password" prepend-icon="lock" type="password"></v-text-field>
                 </v-form>
               </v-card-text>
               <v-card-actions>
@@ -66,7 +66,4 @@
   } */
 </style>
 
-<script lang="ts">
-  import script from './Login';
-  export default script;
-</script>
+<script lang="ts" src="./Login.ts" />

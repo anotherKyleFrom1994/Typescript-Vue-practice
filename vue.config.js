@@ -1,8 +1,8 @@
 module.exports = {
   publicPath: './',
   devServer: {
-    'public': '192.168.0.112:8080',
-    'proxy': 'http://localhost:8080'
+    public: '192.168.0.112:8080',
+    proxy: 'http://localhost:8080'
   },
   pages: {
     'index': {

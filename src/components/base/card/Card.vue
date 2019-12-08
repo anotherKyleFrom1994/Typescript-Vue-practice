@@ -4,7 +4,4 @@
   </v-card>
 </template>
 
-<script lang="ts">
-   import script from './Card';
-   export default script;
-</script>
+<script lang="ts" src="./Card.ts" />

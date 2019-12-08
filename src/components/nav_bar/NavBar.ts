@@ -4,7 +4,7 @@ import { IconType } from '@/utils/enums';
 
 @Component({ components: { Button } })
 export default class NavBar extends Vue {
-  private iconType: typeof IconType = IconType;
+  iconType: typeof IconType = IconType;
 
   created() {
     // console.log(this.iconType);

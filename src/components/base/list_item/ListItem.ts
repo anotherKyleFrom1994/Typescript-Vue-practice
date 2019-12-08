@@ -11,20 +11,20 @@ interface IListItem {
 
 @Component
 export default class ListItem extends Vue {
-  @Prop() private title!: string;
-  @Prop() private subTitle!: string;
-  @Prop() private target!: string;
-  @Prop() private href!: string;
-  @Prop() private displayWording!: string;
+  @Prop() title!: string;
+  @Prop() subTitle!: string;
+  @Prop() target!: string;
+  @Prop() href!: string;
+  @Prop() displayWording!: string;
 
-//   constructor() {
-//     super();
-//     this.title = '';
-//     this.subTitle = '';
-//     this.target = '';
-//     this.href = '';
-//     this.displayWording = '';
-//   }
+  //   constructor() {
+  //     super();
+  //     this.title = '';
+  //     this.subTitle = '';
+  //     this.target = '';
+  //     this.href = '';
+  //     this.displayWording = '';
+  //   }
 
   // @Watch('phoneNum') onPhoneNumChanged(previous: string, after: string) {};
 

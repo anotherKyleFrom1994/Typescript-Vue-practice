@@ -3,6 +3,6 @@ import { IconType } from '@/utils/enums';
 
 @Component
 export default class Button extends Vue {
-  @Prop() private displayWording!: string;
-  @Prop() private iconType!: IconType;
+  @Prop() displayWording!: string;
+  @Prop() iconType!: IconType;
 }

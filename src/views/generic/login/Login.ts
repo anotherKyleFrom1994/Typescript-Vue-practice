@@ -2,13 +2,20 @@
 import { Component, Vue, Prop, Watch, Emit } from 'vue-property-decorator';
 import ListItem from '@/components/base/list_item/ListItem.vue';
 
+enum LoginColType {
+  Username = 'Username',
+    Password = 'Password',
+    PhoneNum = 'PhoneNum'
+}
+
 @Component({ components: { ListItem } })
 export default class Login extends Vue {
-  private username: string = '';
-  private password: string = '';
-  private phoneNum: string = '';
+  loginColType: typeof LoginColType = LoginColType;
+  username: string = '';
+  password: string = '';
+  phoneNum: string = '';
 
-  private errMsg: string = '';
+  errMsg: string = '';
 
   // @Emit('childMethod')
   // handler() {
@@ -25,8 +32,7 @@ export default class Login extends Vue {
 
   };
 
-  private init() {
-  };
+  private init() {};
 
   private checkColumn(input: string, colName: string): string | boolean {
     if (input === undefined || input.length === 0) return colName + '\ncannot be empty';
@@ -38,14 +44,14 @@ export default class Login extends Vue {
     let regexp;
 
     switch (colName) {
-      case 'username':
+      case LoginColType.Username:
         // eslint-disable-next-line
         regexp = new RegExp(/^[a-zA-Z0-9][a-zA-Z0-9\s\-]*[a-zA-Z0-9](?<![_\s\-]{2,}.*)$/);
         break;
-      case 'password':
+      case LoginColType.Password:
         regexp = new RegExp(/^[a-zA-Z0-9]+$/);
         break;
-      case 'phoneNum':
+      case LoginColType.PhoneNum:
         // eslint-disable-next-line
         regexp = new RegExp(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im);
         break;
