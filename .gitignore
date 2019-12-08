@@ -2,7 +2,8 @@
 node_modules
 /dist
 
-/tests/e2e/reports/
+/test/unit/coverage/
+/test/e2e/reports/
 selenium-debug.log
 chromedriver.log
 geckodriver.log

@@ -1,10 +1,10 @@
 module.exports = {
-  'publicPath': '/',
-  'devServer': {
+  publicPath: './',
+  devServer: {
     'public': '192.168.0.112:8080',
     'proxy': 'http://localhost:8080'
   },
-  'pages': {
+  pages: {
     'index': {
       'entry': 'src/main.ts',
       'template': 'public/index.html',
@@ -17,7 +17,28 @@ module.exports = {
       ]
     }
   },
-  'transpileDependencies': [
+  transpileDependencies: [
     'vuetify'
-  ]
+  ],
+  chainWebpack: config => {
+    config.module
+      .rule('vue')
+      .use('vue-loader')
+      .loader('vue-loader')
+      .tap(options => {
+        return options;
+      });
+
+    config.module
+      .rule('eslint')
+      .use('eslint-loader')
+      .tap(options => {
+        options.overlay = {
+          'warnings': true,
+          'errors': true
+        };
+        options.lintOnSave = process.env.NODE_ENV !== 'production';
+        return options;
+      });
+  }
 };
