@@ -5,7 +5,4 @@
   </v-btn>
 </template>
 
-<script lang="ts">
-   import script from './Button';
-   export default script;
-</script>
+<script lang="ts" src="./Button.ts" />

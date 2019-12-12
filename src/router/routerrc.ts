@@ -11,7 +11,7 @@ export const routerOptions: IRouterCustOpt[] = [{
     'path': '/about',
     'name': 'about',
     'webpackChunkName': 'about',
-    'sourcePath': 'views/About.vue'
+    'sourcePath': 'views/home/About.vue'
   },
   {
     'path': '/login',

@@ -35,8 +35,14 @@ export default class Login extends Vue {
   private init() {};
 
   private checkColumn(input: string, colName: string): string | boolean {
-    if (input === undefined || input.length === 0) return colName + '\ncannot be empty';
-    if (!this.checkFormat(input, colName)) return 'Please enter a valid ' + colName;
+    if (input === undefined || input.length === 0) {
+      return colName + '\ncannot be empty';
+    }
+
+    if (!this.checkFormat(input, colName)) {
+      return 'Please enter a valid ' + colName;
+    }
+
     return true;
   };
 

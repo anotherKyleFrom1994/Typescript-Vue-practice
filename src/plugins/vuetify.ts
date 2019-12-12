@@ -1,10 +1,8 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify/lib';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
-// import 'vuetify/src/stylus/app.styl';
-// import 'vuetify/src/styles/main.sass';
+import 'vuetify/src/styles/main.sass';
 
-Vue.use(Vuetify);
 const opts = {
   theme: {
     primary: '#CBAA5C',
@@ -12,6 +10,7 @@ const opts = {
   },
   iconfont: 'mdi'
 };
+Vue.use(Vuetify, opts);
 
 export default new Vuetify({
   opts
