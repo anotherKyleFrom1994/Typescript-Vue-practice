@@ -1,19 +1,25 @@
-import { articles } from '@/data/articles';
+import { articles, IArticle } from '@/data/articles';
 
 export interface IState {
   [key: string]: any
 }
 
-export default {
+interface IItem {
+  [key: string]: string
+}
+
+let items: IItem[] = [{
+    text: 'Home',
+    to: '/'
+  },
+  {
+    text: 'About',
+    href: '#about'
+  }
+];
+
+export const state: IState = {
   articles: articles,
   drawer: false,
-  items: [{
-      text: 'Home',
-      to: '/'
-    },
-    {
-      text: 'About',
-      href: '#about'
-    }
-  ]
+  items: items
 };

@@ -7,9 +7,9 @@
               :key="i"
               xs4>
         <base-card tag="a"
-                   :href="post.href"
-                   height="88"
-                   color="grey lighten-2">
+                  :href="post.href"
+                  height="88"
+                  color="grey lighten-2">
           <v-img v-if="post.src"
                  height="100%"
                  :src="require(`@/assets/instagram/${post.src}`)" />
@@ -19,17 +19,20 @@
   </v-container>
 </template>
 
-<script>
-  export default {
-    data: () => ({
-      posts: [
-        { src: 'adventurealtitude.jpg' },
-        { src: 'garden.jpg' },
-        { src: 'pigduck.jpg' },
-        { src: 'rain.jpg' },
-        { src: 'spices.jpg' },
-        { src: 'sunset.jpg' }
-      ]
-    })
+<script lang="ts">
+  import { Component, Vue, Prop, Watch, Emit } from 'vue-property-decorator';
+  import { namespace, State } from 'vuex-class';
+
+  @Component({})
+  export default class Instagram extends Vue {
+    private posts = [
+      { src: 'adventurealtitude.jpg' },
+      { src: 'garden.jpg' },
+      { src: 'pigduck.jpg' },
+      { src: 'rain.jpg' },
+      { src: 'spices.jpg' },
+      { src: 'sunset.jpg' }
+    ];
+
   };
 </script>

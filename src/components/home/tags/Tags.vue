@@ -13,15 +13,13 @@
   </v-container>
 </template>
 
-<script>
-  // Utilities
-  import {
-    mapGetters
-  } from 'vuex';
+<script lang="ts">
+  import { Component, Vue, Prop, Watch, Emit } from 'vue-property-decorator';
+  import { namespace, State } from 'vuex-class';
+  import { IArticle } from '@/data/articles';
 
-  export default {
-    computed: {
-      ...mapGetters(['categories'])
-    }
+  @Component({})
+  export default class Tags extends Vue {
+    @State('categories') categories!: any;
   };
 </script>

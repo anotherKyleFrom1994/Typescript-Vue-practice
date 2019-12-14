@@ -14,10 +14,10 @@
     <v-layout align-center>
       <v-flex xs3>
         <base-btn v-if="page !== 1"
-                  class="ml-0"
-                  title="Previous page"
-                  square
-                  @click="page--">
+                 class="ml-0"
+                 title="Previous page"
+                 square
+                 @click="page--">
           <v-icon>mdi-chevron-left</v-icon>
         </base-btn>
       </v-flex>
@@ -31,10 +31,10 @@
       <v-flex xs3
               text-xs-right>
         <base-btn v-if="pages > 1 && page < pages"
-                  class="mr-0"
-                  title="Next page"
-                  square
-                  @click="page++">
+                 class="mr-0"
+                 title="Next page"
+                 square
+                 @click="page++">
           <v-icon>mdi-chevron-right</v-icon>
         </base-btn>
       </v-flex>

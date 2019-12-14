@@ -1,7 +1,6 @@
 import { Component, Vue, Prop, Watch, Emit } from 'vue-property-decorator';
-import { Getter, State } from 'vuex-class';
+import { namespace, State } from 'vuex-class';
 import FeedCard from '@/components/home/feed_card/FeedCard.vue';
-import { mapState } from 'vuex';
 import { IArticle } from '@/data/articles';
 
 // Utilities
@@ -26,10 +25,4 @@ export default class Feed extends Vue {
   @Watch('page') onPageChanged(value: number, oldValue: number) {
     window.scrollTo(0, 0);
   }
-
-  // watch: {
-  //   page () {
-  //     window.scrollTo(0, 0)
-  //   }
-  // }
 }

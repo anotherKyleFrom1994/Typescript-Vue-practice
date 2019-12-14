@@ -24,15 +24,13 @@
   </v-container>
 </template>
 
-<script>
-  // Utilities
-  import {
-    mapState
-  } from 'vuex';
+<script lang="ts">
+  import { Component, Vue, Prop, Watch, Emit } from 'vue-property-decorator';
+  import { namespace, State } from 'vuex-class';
+  import { IArticle } from '@/data/articles';
 
-  export default {
-    computed: {
-      ...mapState(['articles'])
-    }
+  @Component({})
+  export default class NewestPosts extends Vue {
+    @State('articles') articles!: IArticle[];
   };
 </script>

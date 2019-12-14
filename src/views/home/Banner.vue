@@ -1,6 +1,6 @@
 <template>
   <base-card dark>
-    <!-- <v-img
+    <v-img
       class="grey lighten-2"
       height="400"
       width="100%"
@@ -25,13 +25,13 @@
           <v-btn
             color="primary"
             depressed
-            round
+            rounded
           >
             Subscribe
           </v-btn>
         </v-flex>
       </v-layout>
-    </v-img> -->
+    </v-img>
   </base-card>
 </template>
 

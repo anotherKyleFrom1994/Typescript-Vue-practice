@@ -1,15 +1,11 @@
 import { IState } from './state';
+import { GetterTree, Getter } from 'vuex';
 
-interface ICategory {
-  text: any;
-  to: string;
-}
-
-interface IGetters {
+export interface IGetters {
   [key: string]: any
 }
 
-export default {
+export const getters: GetterTree < IState, Getter < string, any > > = {
   categories: (state: IState) => {
     const categories: ICategory[] = [];
 
@@ -33,3 +29,8 @@ export default {
     return state.items.concat(getters.categories);
   }
 };
+
+export interface ICategory {
+  text: any;
+  to: string;
+}
