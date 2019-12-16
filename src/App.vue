@@ -1,28 +1,28 @@
 <template>
   <v-app>
-    <!-- Navigator bar -->
-    <NavBar />
+    <core-toolbar />
 
-    <!-- Page content here -->
-    <v-content>
+    <core-drawer />
+
+    <v-content id="home">
       <router-view />
     </v-content>
+
+    <core-footer />
+
+    <core-cta />
   </v-app>
 </template>
 
 <script lang="ts">
-  import Vue from 'vue';
-  import NavBar from '@/views/generic/nav_bar/NavBar.vue';
+  import { Component, Vue, Prop, Watch, Emit } from 'vue-property-decorator';
+  // import NavBar from '@/pages/generic/nav_bar/NavBar.vue';
+  import CoreCta from '@/pages/generic/cta/Cta.vue';
+  import CoreDrawer from '@/pages/generic/drawer/Drawer.vue';
+  import CoreFooter from '@/pages/generic/footer/Footer.vue';
+  import CoreToolbar from '@/pages/generic/toolbar/Toolbar.vue';
+  // import CoreView from '@/pages/generic/nav_bar/NavBar.vue';
 
-  export default Vue.extend({
-    name: 'App',
-
-    components: {
-      NavBar
-    },
-
-    data: () => ({
-      //
-    })
-  });
+  @Component({ components: { CoreCta, CoreDrawer, CoreFooter, CoreToolbar } })
+  export default class App extends Vue {}
 </script>

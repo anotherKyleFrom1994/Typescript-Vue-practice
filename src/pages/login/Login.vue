@@ -10,7 +10,7 @@
           <v-card class="elevation-12">
             <v-toolbar color="primary"
                        dark
-                       flat>
+                       text>
               <v-toolbar-title>Login form</v-toolbar-title>
               <v-spacer></v-spacer>
               <v-tooltip bottom>

@@ -10,3 +10,5 @@
     <v-icon>mdi-download</v-icon>
   </v-btn>
 </template>
+<script lang="ts"
+        src="./Cta.ts" />

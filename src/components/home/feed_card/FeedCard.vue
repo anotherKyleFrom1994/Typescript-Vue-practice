@@ -44,32 +44,11 @@
   </v-flex>
 </template>
 
-<script>
-  export default {
-    props: {
-      size: {
-        type: Number,
-        required: true
-      },
-      value: {
-        type: Object,
-        default: () => ({})
-      }
-    },
-
-    computed: {
-      classes () {
-        return {
-          'md6': this.size === 2,
-          'md4': this.size === 3
-        };
-      }
-    }
-  };
-</script>
-
-<style>
+<style scoped>
   .v-image__image {
     transition: .3s linear;
   }
 </style>
+
+<script lang="ts"
+        src="./FeedCard.ts" />

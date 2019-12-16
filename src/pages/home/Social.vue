@@ -5,15 +5,15 @@
     <v-layout wrap>
       <v-flex xs12
               md4>
-        <Instagram />
+        <instagram />
       </v-flex>
       <v-flex xs12
               md4>
-        <NewestPosts />
+        <newest-posts />
       </v-flex>
       <v-flex xs12
               md4>
-        <Tags />
+        <tags />
       </v-flex>
     </v-layout>
   </v-container>

@@ -1,5 +1,5 @@
 <template>
-  <v-card tile flat v-bind="$attrs" v-on="$listeners">
+  <v-card tile text v-bind="$attrs" v-on="$listeners">
     <slot />
   </v-card>
 </template>

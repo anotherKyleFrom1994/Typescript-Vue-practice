@@ -11,18 +11,18 @@ export const routerOptions: IRouterCustOpt[] = [{
     'path': '/about',
     'name': 'about',
     'webpackChunkName': 'about',
-    'sourcePath': 'views/home/About.vue'
+    'sourcePath': 'pages/home/About.vue'
   },
   {
     'path': '/login',
     'name': 'login',
     'webpackChunkName': 'generic',
-    'sourcePath': 'views/generic/login/Login.vue'
+    'sourcePath': 'pages/login/Login.vue'
   },
   {
     'path': '*',
     'name': 'exceptionCather',
     'webpackChunkName': 'exception',
-    'sourcePath': 'views/Home.vue'
+    'sourcePath': 'pages/Home.vue'
   }
 ];
