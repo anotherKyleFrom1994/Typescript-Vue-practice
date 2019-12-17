@@ -1,14 +1,13 @@
 <template>
   <v-app-bar app
-             text>
+             flat>
     <v-app-bar-nav-icon class="hidden-md-and-up"
                         @click="toggleDrawer" />
-    <v-container mx-auto
-                 py-0>
+    <v-container class="mx-auto py-0">
       <v-row>
         <v-img :src="require('@/assets/logo.png')"
-               class="mr-5"
                contain
+               class="mr-5"
                height="48"
                width="48"
                max-width="48"
@@ -16,14 +15,15 @@
         <v-btn v-for="(link, i) in links"
                :key="i"
                :to="link.to"
-               class="ml-0 hidden-sm-and-down"
+               class="ml-2 hidden-sm-and-down"
+               tile
                text
                @click="onClickButton($event, link)">
           {{ link.text }}
         </v-btn>
         <v-spacer />
         <v-text-field append-icon="mdi-magnify"
-                      text
+                      flat
                       hide-details
                       solo-inverted
                       style="max-width: 300px;" />

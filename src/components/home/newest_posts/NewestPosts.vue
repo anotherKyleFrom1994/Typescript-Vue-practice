@@ -3,9 +3,10 @@
     <base-subheading>Newest Blog Posts</base-subheading>
     <v-row v-for="(article, i) in articles.slice(11, 14)"
            :key="i"
-           class="align-center mb-2">
+           align="center"
+           class="mb-2">
       <v-col sm="12"
-             d-flex>
+             class="d-flex">
         <v-img :src="require(`@/assets/articles/${article.hero}`)"
                class="mr-3"
                height="36"

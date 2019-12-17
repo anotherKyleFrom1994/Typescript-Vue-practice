@@ -4,12 +4,10 @@
                        dark
                        temporary>
     <v-list>
-      <v-list-item router=""
-                   v-for="(link, i) in links"
+      <v-list-item v-for="(link, i) in links"
                    :key="i"
                    :to="link.to"
                    :href="link.href"
-                   active-class="active"
                    @click="onClickListItem($event, link)">
         <v-list-item-title v-text="link.text" />
       </v-list-item>

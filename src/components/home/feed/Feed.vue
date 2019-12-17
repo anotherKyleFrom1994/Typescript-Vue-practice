@@ -1,6 +1,6 @@
 <template>
   <v-container class="grid-list-xl">
-    <v-row wrap>
+    <v-row class="wrap">
       <v-col sm="12">
         <slot />
       </v-col>
