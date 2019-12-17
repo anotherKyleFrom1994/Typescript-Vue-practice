@@ -2,10 +2,10 @@
   <v-container pa-0
                grid-list-md>
     <base-subheading>On Instagram</base-subheading>
-    <v-layout wrap>
-      <v-flex v-for="(post, i) in posts"
+    <v-row class="wrap">
+      <v-col v-for="(post, i) in posts"
               :key="i"
-              xs4>
+              sm="4">
         <base-card tag="a"
                   :href="post.href"
                   height="88"
@@ -14,8 +14,8 @@
                  height="100%"
                  :src="require(`@/assets/instagram/${post.src}`)" />
         </base-card>
-      </v-flex>
-    </v-layout>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 

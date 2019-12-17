@@ -5,7 +5,7 @@
                         @click="toggleDrawer" />
     <v-container mx-auto
                  py-0>
-      <v-layout>
+      <v-row>
         <v-img :src="require('@/assets/logo.png')"
                class="mr-5"
                contain
@@ -27,7 +27,7 @@
                       hide-details
                       solo-inverted
                       style="max-width: 300px;" />
-      </v-layout>
+      </v-row>
     </v-container>
   </v-app-bar>
 </template>

@@ -7,7 +7,7 @@ export default class Drawer extends Vue {
   @State('drawer') drawer: any;
   @Mutation('setDrawer') setDrawer: any;
 
-  onClick(e: any, item: any) {
+  private onClickListItem(e: any, item: any) {
     e.stopPropagation();
 
     if (item.to === '/') {

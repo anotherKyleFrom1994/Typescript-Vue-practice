@@ -5,8 +5,8 @@
     height="auto"
   >
     <v-container mx-auto>
-      <v-layout wrap>
-        <v-flex xs9>
+      <v-row wrap>
+        <v-col sm="9">
           <base-btn
             v-for="(item, i) in items"
             :key="i"
@@ -18,7 +18,7 @@
           >
             <v-icon v-text="item.icon" />
           </base-btn>
-        </v-flex>
+        </v-col>
         <v-spacer />
         <base-btn
           class="mr-0"
@@ -28,7 +28,7 @@
         >
           <v-icon>mdi-chevron-up</v-icon>
         </base-btn>
-      </v-layout>
+      </v-row>
     </v-container>
   </v-footer>
 </template>

@@ -3,11 +3,10 @@
                tag="section">
     <base-card color="rgba(203, 170, 92, 0.51)"
                class="pa-3">
-      <v-container grid-list-xl
-                   pa-0>
-        <v-layout wrap>
-          <v-flex xs12
-                  md5>
+      <v-container class="grid-list-xl pa-0">
+        <v-row class="wrap">
+          <v-col sm="12"
+                 md="5">
             <base-subheading class="mb-3">
               Subscribe
             </base-subheading>
@@ -16,8 +15,7 @@
               and receive notifications of new posts by email.
             </p>
 
-            <v-layout wrap
-                      pa-2>
+            <v-row class="wrap pa-2">
               <v-text-field solo
                             hide-details
                             style="max-width: 400px;" />
@@ -27,11 +25,11 @@
                      style="height: 48px">
                 Subscribe
               </v-btn>
-            </v-layout>
-          </v-flex>
-          <v-flex xs12
-                  md6
-                  offset-md1>
+            </v-row>
+          </v-col>
+          <v-col sm="12"
+                 md="6"
+                 offset-md="1">
             <base-subheading>Contact</base-subheading>
             <v-list class="transparent">
               <v-list-item>
@@ -71,8 +69,8 @@
                 </v-list-item-subtitle>
               </v-list-item>
             </v-list>
-          </v-flex>
-        </v-layout>
+          </v-col>
+        </v-row>
       </v-container>
     </base-card>
   </v-container>

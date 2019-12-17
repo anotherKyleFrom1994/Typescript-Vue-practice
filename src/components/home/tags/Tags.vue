@@ -1,5 +1,5 @@
 <template>
-  <v-container pa-0>
+  <v-container class="pa-0">
     <base-subheading>Tags</base-subheading>
     <v-chip v-for="(category, i) in categories"
             :key="i"

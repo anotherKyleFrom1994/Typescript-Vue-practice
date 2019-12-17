@@ -1,12 +1,11 @@
 <template>
   <v-container pa-0>
     <base-subheading>Newest Blog Posts</base-subheading>
-    <v-layout v-for="(article, i) in articles.slice(11, 14)"
-              :key="i"
-              align-center
-              mb-2>
-      <v-flex xs12
-              d-flex>
+    <v-row v-for="(article, i) in articles.slice(11, 14)"
+           :key="i"
+           class="align-center mb-2">
+      <v-col sm="12"
+             d-flex>
         <v-img :src="require(`@/assets/articles/${article.hero}`)"
                class="mr-3"
                height="36"
@@ -19,8 +18,8 @@
             Date
           </div>
         </div>
-      </v-flex>
-    </v-layout>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 

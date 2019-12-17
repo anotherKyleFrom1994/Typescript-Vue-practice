@@ -1,14 +1,14 @@
 <template>
-  <div class="home">
-    <Articles>
-      <Banner />
-    </Articles>
+  <div id="home">
+    <articles>
+      <banner />
+    </articles>
 
-    <About />
+    <about />
 
-    <Subscribe />
+    <subscribe />
 
-    <Social />
+    <social />
   </div>
 </template>
 
