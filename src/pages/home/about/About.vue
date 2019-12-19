@@ -1,8 +1,6 @@
 <template>
-  <v-container
-    id="about"
-    tag="section"
-  >
+  <v-container id="about"
+               tag="section">
     <base-subheading>About Us</base-subheading>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut tortor tellus. Donec maximus curs us pulvinar.
@@ -13,9 +11,5 @@
   </v-container>
 </template>
 
-<script lang="ts">
-  import { Component, Vue } from 'vue-property-decorator';
-
-  @Component
-  export default class About extends Vue {}
-</script>
+<script lang="ts"
+        src="./About.ts" />

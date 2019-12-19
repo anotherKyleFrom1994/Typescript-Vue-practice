@@ -3,6 +3,7 @@ import Vuetify from 'vuetify/lib';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import 'vuetify/src/styles/main.sass';
 import '@mdi/font/css/materialdesignicons.css';
+import '@/fonts/roboto.css';
 import { Theme } from 'vuetify/types/services/theme';
 import { Icons } from 'vuetify/types/services/icons';
 

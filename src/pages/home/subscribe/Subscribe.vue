@@ -75,9 +75,5 @@
     </base-card>
   </v-container>
 </template>
-<script lang="ts">
-  import { Component, Vue } from 'vue-property-decorator';
-
-  @Component
-  export default class Subscribe extends Vue {};
-</script>
+<script lang="ts"
+        src="./Subscribe.ts" />
