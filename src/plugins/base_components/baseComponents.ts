@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import { Vue } from 'vue-property-decorator';
 import BaseBtn from '@/components/base/button/Button.vue';
 import BaseCard from '@/components/base/card/Card.vue';
 import BaseSubheading from '@/components/base/subheading/Subheading.vue';

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
+import { IRouterCustOpt, routerOptions } from './routerrc';
 import Home from '@/pages/Home.vue';
-import { IRouterCustOpt, routerOptions } from '@/router/routerrc';
 
 Vue.use(VueRouter);
 
