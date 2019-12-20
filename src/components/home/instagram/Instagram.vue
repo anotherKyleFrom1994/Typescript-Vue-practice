@@ -4,12 +4,12 @@
     <base-subheading>On Instagram</base-subheading>
     <v-row class="wrap">
       <v-col v-for="(post, i) in posts"
-              :key="i"
-              sm="4">
+             :key="i"
+             sm="4">
         <base-card tag="a"
-                  :href="post.href"
-                  height="88"
-                  color="grey lighten-2">
+                   :href="post.href"
+                   height="88"
+                   color="grey lighten-2">
           <v-img v-if="post.src"
                  height="100%"
                  :src="require(`@/assets/instagram/${post.src}`)" />
@@ -19,20 +19,5 @@
   </v-container>
 </template>
 
-<script lang="ts">
-  import { Component, Vue, Prop, Watch, Emit } from 'vue-property-decorator';
-  import { namespace, State } from 'vuex-class';
-
-  @Component({})
-  export default class Instagram extends Vue {
-    private posts = [
-      { src: 'adventurealtitude.jpg' },
-      { src: 'garden.jpg' },
-      { src: 'pigduck.jpg' },
-      { src: 'rain.jpg' },
-      { src: 'spices.jpg' },
-      { src: 'sunset.jpg' }
-    ];
-
-  };
-</script>
+<script lang="ts"
+        src="./Instagram.ts" />
