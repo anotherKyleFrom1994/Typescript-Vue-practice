@@ -8,4 +8,4 @@
     <slot />
   </v-btn>
 </template>
-<script lang="ts" src="./Button.ts"/>
+<script lang="ts" src="./SmallBtn.ts"/>

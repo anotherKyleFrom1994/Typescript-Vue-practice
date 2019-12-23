@@ -1,7 +1,7 @@
 <template>
   <v-app id="login">
     <v-container fluid
-                 fill-height>
+                 class="fill-height">
       <v-row align="center"
              justify="center">
         <v-col xs="12"
@@ -10,29 +10,25 @@
           <v-card class="elevation-12">
             <v-toolbar color="primary"
                        dark
-                       text>
+                       flat>
               <v-toolbar-title>Login form</v-toolbar-title>
               <v-spacer></v-spacer>
               <v-tooltip bottom>
                 <template v-slot:activator="{ on }">
-                  <v-btn icon
-                         large
-                         target="_blank"
-                         v-on="on">
+                  <large-btn icon
+                             target="_blank">
                     <v-icon>mdi-code-tags</v-icon>
-                  </v-btn>
+                  </large-btn>
                 </template>
                 <span>Source</span>
               </v-tooltip>
               <v-tooltip right>
                 <template v-slot:activator="{ on }">
-                  <v-btn icon
-                         large
-                         href="https://codepen.io/johnjleider/pen/pMvGQO"
-                         target="_blank"
-                         v-on="on">
+                  <large-btn icon
+                             href="https://codepen.io/johnjleider/pen/pMvGQO"
+                             target="_blank">
                     <v-icon>mdi-codepen</v-icon>
-                  </v-btn>
+                  </large-btn>
                 </template>
                 <span>Codepen</span>
               </v-tooltip>

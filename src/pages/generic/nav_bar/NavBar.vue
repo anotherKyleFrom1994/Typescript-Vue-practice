@@ -9,7 +9,7 @@
     <v-spacer></v-spacer>
 
     <router-link to="/login">
-      <Button displayWording="LOGIN NOW!" :iconType="iconType.Person" />
+      <samll-btn displayWording="LOGIN NOW!" :iconType="iconType.Person" />
     </router-link>
   </v-app-bar>
 </template>

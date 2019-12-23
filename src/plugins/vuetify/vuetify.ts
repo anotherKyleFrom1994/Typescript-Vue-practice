@@ -25,7 +25,15 @@ const theme: Theme = {
   dark: false,
   disable: false,
   default: false,
-  options: {},
+  options: {
+    minifyTheme: function (css: string) {
+      return process.env.NODE_ENV === 'production' ? css.replace(/[\r\n|\r|\n]/g, '') : css;
+    },
+
+    // Enabling customProperties will also generate a css variable for each theme color, which you can then use in your components' <style> blocks.
+    customProperties: true
+  },
+
   themes: {
     dark: baseTheme,
     light: baseTheme
