@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import { IRouterCustOpt, routerOptions } from './routerrc';
 import Home from '@/pages/Home.vue';
-
+import PageNotFound from '@/pages/PageNotFound.vue';
 Vue.use(VueRouter);
 
 const routes: RouteConfig[] = [{
@@ -20,7 +20,13 @@ for (let index in routeConfs) {
   if (routeConfs[index] !== null) {
     routes.push(routeConfs[index]);
   }
+
 }
+routes.push({
+  path: '*',
+  name: 'pageNotFound',
+  component: PageNotFound
+});
 
 // Getting all configurations from 'router.json'.
 function createRouteConfigs (routerrcs: IRouterCustOpt[]): RouteConfig[] {

@@ -4,7 +4,7 @@ export interface IRouterCustOpt {
   name: string;
   webpackChunkName: string;
   sourcePath: string;
-  children?: IRouterCustOpt;
+  children ? : IRouterCustOpt;
 }
 
 export const routerOptions: IRouterCustOpt[] = [{
@@ -18,11 +18,5 @@ export const routerOptions: IRouterCustOpt[] = [{
     'name': 'login',
     'webpackChunkName': 'generic',
     'sourcePath': 'pages/login/Login.vue'
-  },
-  {
-    'path': '*',
-    'name': 'exceptionCather',
-    'webpackChunkName': 'exception',
-    'sourcePath': 'pages/Home.vue'
   }
 ];

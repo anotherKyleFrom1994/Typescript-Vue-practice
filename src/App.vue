@@ -16,12 +16,10 @@
 
 <script lang="ts">
   import { Component, Vue, Prop, Watch, Emit } from 'vue-property-decorator';
-  // import NavBar from '@/pages/generic/nav_bar/NavBar.vue';
   import CoreCta from '@/pages/generic/cta/Cta.vue';
   import CoreDrawer from '@/pages/generic/drawer/Drawer.vue';
   import CoreFooter from '@/pages/generic/footer/Footer.vue';
   import CoreToolbar from '@/pages/generic/toolbar/Toolbar.vue';
-  // import CoreView from '@/pages/generic/nav_bar/NavBar.vue';
 
   @Component({ components: { CoreCta, CoreDrawer, CoreFooter, CoreToolbar } })
   export default class App extends Vue {}
