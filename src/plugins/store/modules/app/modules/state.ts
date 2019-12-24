@@ -1,14 +1,14 @@
-import { articles, IArticle } from '@/data/articles';
+import { articles } from '@/data/articles';
 
-export interface IState {
+export interface State {
   [key: string]: any
 }
 
-interface IItem {
+export interface Item {
   [key: string]: string
 }
 
-let items: IItem[] = [{
+let items: Item[] = [{
     text: 'Home',
     to: '/'
   },
@@ -18,8 +18,10 @@ let items: IItem[] = [{
   }
 ];
 
-export const state: IState = {
+const state: State = {
   articles: articles,
   drawer: false,
   items: items
 };
+
+export default state;

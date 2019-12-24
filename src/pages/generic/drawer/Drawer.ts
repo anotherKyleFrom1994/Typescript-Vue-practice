@@ -3,9 +3,9 @@ import { namespace, State, Getter, Mutation } from 'vuex-class';
 
 @Component({ name: 'CoreDrawer' })
 export default class Drawer extends Vue {
-  @Getter('links') links: any;
-  @State('drawer') drawer: any;
-  @Mutation('setDrawer') setDrawer: any;
+  @namespace('app').Getter('links') links: any;
+  @namespace('app').State('drawer') drawer: any;
+  @namespace('app').Mutation('setDrawer') setDrawer: any;
 
   private onClickListItem(e: any, item: any) {
     e.stopPropagation();

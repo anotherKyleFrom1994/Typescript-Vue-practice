@@ -1,13 +1,18 @@
-import { IState } from './state';
+import { State } from './state';
 import { GetterTree, Getter } from 'vuex';
 
 export interface IGetters {
   [key: string]: any
 }
 
-export const getters: GetterTree < IState, Getter < string, any > > = {
-  categories: (state: IState) => {
-    const categories: ICategory[] = [];
+export interface Category {
+  text: any;
+  to: string;
+}
+
+const getters: GetterTree < State, Getter < string, any > > = {
+  categories: (state: State) => {
+    const categories: Category[] = [];
 
     for (const article of state.articles) {
       if (
@@ -25,12 +30,9 @@ export const getters: GetterTree < IState, Getter < string, any > > = {
 
     return categories.sort().slice(0, 4);
   },
-  links: (state: IState, getters: IGetters) => {
+  links: (state: State, getters: IGetters) => {
     return state.items.concat(getters.categories);
   }
 };
 
-export interface ICategory {
-  text: any;
-  to: string;
-}
+export default getters;

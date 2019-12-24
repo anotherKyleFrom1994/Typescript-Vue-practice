@@ -9,7 +9,7 @@ export default class Feed extends Vue {
   private layout: number[] = [2, 2, 1, 2, 2, 3, 3, 3, 3, 3, 3];
   private page: number = 1;
 
-  @State('articles') articles!: IArticle[];
+  @namespace('app').State('articles') articles!: IArticle[];
 
   get pages() {
     return Math.ceil(this.articles.length / 11);

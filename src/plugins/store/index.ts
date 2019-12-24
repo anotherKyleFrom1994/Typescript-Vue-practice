@@ -1,18 +1,23 @@
 import Vue from 'vue';
 import Vuex, { StoreOptions } from 'vuex';
-import { state } from './state';
-import { mutations } from './mutations';
-import { actions } from './actions';
-import { getters } from './getters';
+import app from './modules/app';
 
+// register VUEX
 Vue.use(Vuex);
 
 let opt: StoreOptions < any > = {
-  state: state,
-  mutations: mutations,
-  actions: actions,
-  getters: getters,
-  strict: true
+  // strict mode
+  strict: true,
+
+  // module states
+  modules: { app },
+
+  // root states
+  state: {},
+  mutations: {},
+  actions: {},
+  getters: {}
+
 };
 
 export default new Vuex.Store(opt);

@@ -3,5 +3,5 @@ import { namespace, State, Getter } from 'vuex-class';
 
 @Component({})
 export default class Tags extends Vue {
-  @Getter('categories') categories!: any;
+  @namespace('app').Getter('categories') categories!: any;
 };
