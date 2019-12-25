@@ -41,9 +41,9 @@ const theme: Theme = {
   currentTheme: baseTheme
 };
 
-const opts = {
+const vuetify = new Vuetify({
   theme: theme,
   icons: icons
-};
+});
 
-export default new Vuetify(opts);
+export default vuetify;

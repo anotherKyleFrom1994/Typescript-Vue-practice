@@ -1,4 +1,4 @@
-import { State } from './state';
+import { State } from '@/plugins/store';
 import { MutationTree, Mutation } from 'vuex';
 
 const mutations: MutationTree < Mutation < any > > = {

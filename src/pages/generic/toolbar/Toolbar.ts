@@ -3,8 +3,8 @@ import { namespace, State, Getter, Mutation } from 'vuex-class';
 
 @Component({})
 export default class Toolbar extends Vue {
-  @namespace('app').Getter('links') links!: any;
-  @namespace('app').Mutation('toggleDrawer') toggleDrawer!: any;
+  @namespace('home').Getter('links') links!: any;
+  @namespace('home').Mutation('toggleDrawer') toggleDrawer!: any;
 
   private onClickButton(e: Event, item: any) {
     e.stopPropagation();

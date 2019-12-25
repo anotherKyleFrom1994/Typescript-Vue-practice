@@ -1,8 +1,5 @@
 import { articles } from '@/data/articles';
-
-export interface State {
-  [key: string]: any
-}
+import { State } from '@/plugins/store';
 
 export interface Item {
   [key: string]: string

@@ -1,9 +1,5 @@
-import { State } from './state';
+import { State } from '@/plugins/store';
 import { GetterTree, Getter } from 'vuex';
-
-export interface IGetters {
-  [key: string]: any
-}
 
 export interface Category {
   text: any;
@@ -30,7 +26,7 @@ const getters: GetterTree < State, Getter < string, any > > = {
 
     return categories.sort().slice(0, 4);
   },
-  links: (state: State, getters: IGetters) => {
+  links: (state: State, getters: any) => {
     return state.items.concat(getters.categories);
   }
 };

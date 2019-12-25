@@ -1,5 +1,5 @@
 import { Component, Vue, Prop, Watch, Emit } from 'vue-property-decorator';
-import { IconType } from '@/utils/enums';
+import IconType from '@/enums/iconType';
 
 @Component({})
 export default class NavBar extends Vue {

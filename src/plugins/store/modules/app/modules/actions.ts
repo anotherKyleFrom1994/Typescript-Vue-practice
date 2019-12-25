@@ -1,5 +1,5 @@
 import { Store } from 'vuex';
-import { State } from './state';
+import { State } from '@/plugins/store';
 
 const actions = {
 

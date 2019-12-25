@@ -4,5 +4,5 @@ import { IArticle } from '@/data/articles';
 
 @Component({})
 export default class NewestPosts extends Vue {
-  @namespace('app').State('articles') articles!: IArticle[];
+  @namespace('home').State('articles') articles!: IArticle[];
 };
