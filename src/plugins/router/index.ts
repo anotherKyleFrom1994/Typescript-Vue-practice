@@ -1,8 +1,9 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import { IRouterCustOpt, routerOptions } from './routerrc';
-import Home from '@/pages/Home.vue';
-import PageNotFound from '@/pages/PageNotFound.vue';
+import Home from '@/pages/home/Home.vue';
+import PageNotFound from '@/pages/page_not_found/PageNotFound.vue';
+
 Vue.use(VueRouter);
 
 const routes: RouteConfig[] = [{

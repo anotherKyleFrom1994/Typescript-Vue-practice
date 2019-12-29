@@ -41,11 +41,8 @@
   </v-col>
 </template>
 
-<style scoped>
-  .v-image__image {
-    transition: .3s linear;
-  }
-</style>
-
 <script lang="ts"
         src="./FeedCard.ts" />
+
+<style lang="scss"
+       src="./FeedCard.scss" />

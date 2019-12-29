@@ -18,5 +18,11 @@ export const routerOptions: IRouterCustOpt[] = [{
     'name': 'login',
     'webpackChunkName': 'generic',
     'sourcePath': 'pages/login/Login.vue'
+  },
+  {
+    'path': '/activity',
+    'name': 'activity',
+    'webpackChunkName': 'activity',
+    'sourcePath': 'pages/activity/Activity.vue'
   }
 ];
