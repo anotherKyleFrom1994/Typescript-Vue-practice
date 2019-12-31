@@ -23,6 +23,7 @@ for (let index in routeConfs) {
   }
 
 }
+
 routes.push({
   path: '*',
   name: 'pageNotFound',

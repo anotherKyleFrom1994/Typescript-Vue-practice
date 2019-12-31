@@ -16,7 +16,7 @@ let items: Item[] = [{
 ];
 
 const state: State = {
-  articles: articles,
+  photos: articles,
   drawer: false,
   items: items
 };

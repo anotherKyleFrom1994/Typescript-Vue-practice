@@ -1,7 +1,9 @@
 <template>
   <div id="activity">
+
     <photos />
     <introduction />
+
   </div>
 </template>
 

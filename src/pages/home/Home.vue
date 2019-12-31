@@ -14,11 +14,11 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
-  import About from '@/pages/home/about/About.vue';
-  import Articles from '@/pages/home/articles/Articles.vue';
-  import Banner from '@/pages/home/banner/Banner.vue';
-  import Social from '@/pages/home/social/Social.vue';
-  import Subscribe from '@/pages/home/subscribe/Subscribe.vue';
+  import About from './about/About.vue';
+  import Articles from './articles/Articles.vue';
+  import Banner from './banner/Banner.vue';
+  import Social from './social/Social.vue';
+  import Subscribe from './subscribe/Subscribe.vue';
 
   @Component({
     components: {

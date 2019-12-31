@@ -10,13 +10,13 @@ const getters: GetterTree < State, Getter < string, any > > = {
   categories: (state: State) => {
     const categories: Category[] = [];
 
-    for (const article of state.articles) {
+    for (const photo of state.photos) {
       if (
-        !article.category ||
-        categories.find(category => category.text === article.category)
+        !photo.category ||
+        categories.find(category => category.text === photo.category)
       ) continue;
 
-      const text = article.category;
+      const text = photo.category;
 
       categories.push({
         text,

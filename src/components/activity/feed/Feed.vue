@@ -4,20 +4,20 @@
            dense>
       <v-col sm="6">
         <v-row dense>
-          <feed-card :key="paginatedArticles[0].title"
+          <feed-card :key="paginatedPhotos[0].title"
                      :size="1"
                      :height="'100%'"
-                     :value="paginatedArticles[0]">
+                     :value="paginatedPhotos[0]">
           </feed-card>
         </v-row>
       </v-col>
       <v-col sm="6">
         <v-row dense>
-          <feed-card v-for="(article, i) in paginatedArticles"
-                     :key="article.title"
+          <feed-card v-for="(photo, i) in paginatedPhotos"
+                     :key="photo.title"
                      :height="'100%'"
                      :size="layout[i]"
-                     :value="article">
+                     :value="photo">
 
           </feed-card>
         </v-row>

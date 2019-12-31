@@ -3,13 +3,14 @@ import { Component, Vue, Prop, Watch, Emit } from 'vue-property-decorator';
 export interface Item {
   src: string;
   title ? : string;
-  displayWording ? : string;
+  subheading ? : string;
   button ? : button;
+  href ? : string;
 }
 
 export interface button {
-  displayWording: string;
-  color: 'primary' | 'secondary';
+  title: string;
+  color ? : 'primary' | 'secondary';
 }
 
 @Component({ inheritAttrs: false })

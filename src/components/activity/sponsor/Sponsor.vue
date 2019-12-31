@@ -1,8 +1,6 @@
 <template>
-  <v-col>
-
-    111111111111
-  </v-col>
+  <base-portrait>
+  </base-portrait>
 </template>
 
 <script lang="ts"
