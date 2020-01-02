@@ -1,5 +1,6 @@
 <template>
-  <base-portrait>
+  <base-portrait :image-src="imageSrc"
+                 :list-items="listItems">
   </base-portrait>
 </template>
 

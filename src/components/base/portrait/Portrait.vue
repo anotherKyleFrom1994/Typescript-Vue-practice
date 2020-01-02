@@ -21,27 +21,31 @@
       </v-btn>
     </v-card-title> -->
 
-    <v-img src="https://picsum.photos/700?image=996"
+    <v-img :src="imageSrc"
            height="200px"></v-img>
 
     <v-list>
-      <v-list-item>
-        <v-list-item-action>
-          <v-icon>mdi-phone</v-icon>
-        </v-list-item-action>
+      <template v-for="(item, i) in listItems">
+        <v-list-item :key="'item' + i">
+          <v-list-item-action v-if="item.iconStart">
+            <v-icon>{{ item.iconStart }}</v-icon>
+          </v-list-item-action>
 
-        <v-list-item-content>
-          <v-list-item-title>(650) 555-1234</v-list-item-title>
-        </v-list-item-content>
-        <v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
 
-          <v-icon>mdi-message-text</v-icon>
-        </v-list-item-action>
-      </v-list-item>
+          <v-list-item-action v-if="item.iconEnd">
+            <v-icon>{{ item.iconEnd }}</v-icon>
+          </v-list-item-action>
+        </v-list-item>
 
-      <v-divider inset></v-divider>
+        <v-divider v-if="item.divider"
+                   :key="'divider'+ i"
+                   inset></v-divider>
+      </template>
 
-      <v-list-item>
+      <!-- <v-list-item>
         <v-list-item-action>
           <v-icon>mdi-phone</v-icon>
         </v-list-item-action>
@@ -77,7 +81,7 @@
         <v-list-item-content>
           <v-list-item-title>Orlando, FL 79938</v-list-item-title>
         </v-list-item-content>
-      </v-list-item>
+      </v-list-item> -->
     </v-list>
 
   </v-card>
