@@ -4,7 +4,7 @@
          bottom
          right
          color="secondary"
-         href="https://github.com/vuetifyjs/theme-blog"
+         @click="hello()"
          target="_blank"
          rel="noopener">
     <v-icon>mdi-download</v-icon>

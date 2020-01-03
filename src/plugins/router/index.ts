@@ -21,7 +21,6 @@ for (let index in routeConfs) {
   if (routeConfs[index] !== null) {
     routes.push(routeConfs[index]);
   }
-
 }
 
 routes.push({

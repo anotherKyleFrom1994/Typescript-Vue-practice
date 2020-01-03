@@ -1,6 +1,6 @@
 <template>
   <v-card class="portrait">
-    <!-- <v-card-title class="cyan darken-1">
+    <v-card-title class="cyan darken-1">
       <span class="headline white--text">Sarah Mcbeal</span>
 
       <v-spacer></v-spacer>
@@ -19,7 +19,7 @@
              icon>
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
-    </v-card-title> -->
+    </v-card-title>
 
     <v-img :src="imageSrc"
            height="200px"></v-img>
@@ -44,44 +44,6 @@
                    :key="'divider'+ i"
                    inset></v-divider>
       </template>
-
-      <!-- <v-list-item>
-        <v-list-item-action>
-          <v-icon>mdi-phone</v-icon>
-        </v-list-item-action>
-
-        <v-list-item-content>
-          <v-list-item-title>(323) 555-6789</v-list-item-title>
-        </v-list-item-content>
-
-        <v-list-item-action>
-          <v-icon>mdi-message-text</v-icon>
-        </v-list-item-action>
-      </v-list-item>
-
-      <v-divider inset></v-divider>
-
-      <v-list-item>
-        <v-list-item-action>
-          <v-icon>mdi-email</v-icon>
-        </v-list-item-action>
-
-        <v-list-item-content>
-          <v-list-item-title>mcbeal@example.com</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-divider inset></v-divider>
-
-      <v-list-item>
-        <v-list-item-action>
-          <v-icon>mdi-map-marker</v-icon>
-        </v-list-item-action>
-
-        <v-list-item-content>
-          <v-list-item-title>Orlando, FL 79938</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item> -->
     </v-list>
 
   </v-card>
