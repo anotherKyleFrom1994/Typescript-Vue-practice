@@ -18,7 +18,9 @@ let opt: StoreOptions < any > = {
   modules: { app, home, activity },
 
   // root states
-  state: {},
+  state: {
+    user: 'user'
+  },
   mutations: {},
   actions: {},
   getters: {}
