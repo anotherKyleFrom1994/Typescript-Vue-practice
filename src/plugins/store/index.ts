@@ -3,14 +3,11 @@ import Vuex, { StoreOptions } from 'vuex';
 import app from './modules/app';
 import home from './modules/home';
 import activity from './modules/activity';
+
 // register VUEX
 Vue.use(Vuex);
 
-export interface State {
-  [key: string]: any
-}
-
-let opt: StoreOptions < any > = {
+let opt: StoreOptions<any> = {
   // strict mode
   strict: true,
 
@@ -21,10 +18,16 @@ let opt: StoreOptions < any > = {
   state: {
     user: 'user'
   },
+
   mutations: {},
   actions: {},
   getters: {}
 
 };
 
+export interface State<T> {
+  [key: string]: T;
+}
+
+export { Action, ActionContext, MutationTree, Mutation, Getter } from 'vuex';
 export default new Vuex.Store(opt);

@@ -6,8 +6,8 @@ export interface Category {
   to: string;
 }
 
-const getters: GetterTree < State, Getter < string, any > > = {
-  categories: (state: State) => {
+const getters: GetterTree<State<any>, Getter<string, any>> = {
+  categories: (state: State<any>) => {
     const categories: Category[] = [];
 
     for (const article of state.articles) {
@@ -26,7 +26,7 @@ const getters: GetterTree < State, Getter < string, any > > = {
 
     return categories.sort().slice(0, 4);
   },
-  links: (state: State, getters: any) => {
+  links: (state: State<any>, getters: any) => {
     return state.items.concat(getters.categories);
   }
 };

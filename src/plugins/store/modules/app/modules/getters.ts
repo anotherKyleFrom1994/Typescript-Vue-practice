@@ -1,6 +1,10 @@
 import { GetterTree, Getter } from 'vuex';
 import { State } from '@/plugins/store';
 
-const getters: GetterTree < State, Getter < string, any > > = {};
+export enum GetterType {
+
+};
+
+const getters: GetterTree<State<any>, Getter<string, any>> = {};
 
 export default getters;

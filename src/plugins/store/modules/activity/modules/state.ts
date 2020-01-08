@@ -1,24 +1,9 @@
 import { articles } from '@/data/articles';
 import { State } from '@/plugins/store';
 
-export interface Item {
-  [key: string]: string
-}
-
-let items: Item[] = [{
-    text: 'Home',
-    to: '/'
-  },
-  {
-    text: 'About',
-    href: '#about'
-  }
-];
-
-const state: State = {
+const state: State<any> = {
   photos: articles,
-  drawer: false,
-  items: items
+  sponsorId: ''
 };
 
 export default state;

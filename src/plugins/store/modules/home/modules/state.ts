@@ -2,20 +2,20 @@ import { articles } from '@/data/articles';
 import { State } from '@/plugins/store';
 
 export interface Item {
-  [key: string]: string
+  [key: string]: string;
 }
 
 let items: Item[] = [{
-    text: 'Home',
-    to: '/'
-  },
-  {
-    text: 'About',
-    href: '#about'
-  }
+  text: 'Home',
+  to: '/'
+},
+{
+  text: 'About',
+  href: '#about'
+}
 ];
 
-const state: State = {
+const state: State<any> = {
   articles: articles,
   drawer: false,
   items: items
