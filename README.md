@@ -37,7 +37,7 @@ typescript-vue-practice/
    └─ pages/
    └─ plugins/
    └─ types/
-├─ tests/
+└─ tests/
    └─ e2e
    └─ unit
 ```
