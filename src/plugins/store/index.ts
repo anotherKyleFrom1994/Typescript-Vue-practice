@@ -28,6 +28,5 @@ let opt: StoreOptions<any> = {
 export interface State<T> {
   [key: string]: T;
 }
-
 export { Action, ActionContext, MutationTree, Mutation, Getter } from 'vuex';
 export default new Vuex.Store(opt);
