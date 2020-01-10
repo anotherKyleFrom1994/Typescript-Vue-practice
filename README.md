@@ -28,18 +28,18 @@ Below is what I use to construct this project:
 
 ```txt
 typescript-vue-practice/
-├─ public/
-└─ src/
-   └─ assets/
-   └─ components/
-   └─ data/
-   └─ enums/
-   └─ pages/
-   └─ plugins/
-   └─ types/
-└─ tests/
-   └─ e2e
-   └─ unit
+  ├─ public/
+  └─ src/
+    └─ assets/
+    └─ components/
+    └─ data/
+    └─ enums/
+    └─ pages/
+    └─ plugins/
+    └─ types/
+  └─ tests/
+    └─ e2e
+    └─ unit
 ```
 
 # Initialize the project
