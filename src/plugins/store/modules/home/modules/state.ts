@@ -1,5 +1,10 @@
 import { articles } from '@/data/articles';
 import { State } from '@/plugins/store';
+export enum StateType {
+  TOPICS = 'topics',
+  DRAWER = 'drawer',
+  ITEMS = 'items'
+};
 
 export interface Item {
   [key: string]: string;
@@ -16,7 +21,7 @@ let items: Item[] = [{
 ];
 
 const state: State<any> = {
-  articles: articles,
+  topics: articles,
   drawer: false,
   items: items
 };

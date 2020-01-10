@@ -1,9 +1,9 @@
-import { State } from '@/plugins/store';
-import { MutationTree, Mutation } from 'vuex';
+import { State, Mutation, MutationTree } from '@/plugins/store';
 
-const mutations: MutationTree < Mutation < any > > = {
-  setDrawer: (state: State<any>, payload: boolean) => (state.drawer = payload),
-  toggleDrawer: (state: State<any>) => (state.drawer = !state.drawer)
+export enum MutationType {
+};
+
+const mutations: MutationTree<Mutation<any>> = {
 };
 
 export default mutations;

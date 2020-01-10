@@ -11,5 +11,6 @@ const app = {
   getters: getters
 };
 
+export const ModuleName = 'app';
 export { StateType, MutationType, ActionType, GetterType };
 export default app;

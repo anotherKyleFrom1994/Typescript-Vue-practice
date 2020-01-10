@@ -1,13 +1,14 @@
 import { Component, Vue, Prop, Watch, Emit } from 'vue-property-decorator';
-import { namespace, State, Getter, Mutation } from 'vuex-class';
+import { namespace } from 'vuex-class';
+import { ModuleName, GetterType, StateType, MutationType } from '@/plugins/store/modules/home';
 
 @Component({ name: 'CoreDrawer' })
 export default class Drawer extends Vue {
-  @namespace('home').Getter('links') links: any;
-  @namespace('home').State('drawer') drawer: any;
-  @namespace('home').Mutation('setDrawer') setDrawer: any;
+  @namespace(ModuleName).Getter(GetterType.LINKS) links: any;
+  @namespace(ModuleName).State(StateType.DRAWER) drawer: any;
+  @namespace(ModuleName).Mutation(MutationType.SET_DRAWER) setDrawer: any;
 
-  private onClickListItem(e: any, item: any) {
+  private onClickListItem (e: any, item: any) {
     e.stopPropagation();
 
     if (item.to === '/') {

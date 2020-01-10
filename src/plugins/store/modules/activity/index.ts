@@ -1,7 +1,7 @@
-import state from './modules/state';
-import mutations from './modules/mutations';
-import actions from './modules/actions';
-import getters from './modules/getters';
+import state, { StateType } from './modules/state';
+import mutations, { MutationType } from './modules/mutations';
+import actions, { ActionType } from './modules/actions';
+import getters, { GetterType } from './modules/getters';
 
 const activity = {
   namespaced: true, // 成為帶名稱空間的模組
@@ -11,4 +11,6 @@ const activity = {
   getters: getters
 };
 
+export const ModuleName = 'activity';
+export { StateType, MutationType, ActionType, GetterType };
 export default activity;

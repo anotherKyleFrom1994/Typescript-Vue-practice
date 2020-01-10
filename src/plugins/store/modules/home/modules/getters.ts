@@ -1,6 +1,11 @@
 import { State } from '@/plugins/store';
 import { GetterTree, Getter } from 'vuex';
 
+export enum GetterType {
+  CATEGORIES = 'categories',
+  LINKS = 'categories'
+};
+
 export interface Category {
   text: any;
   to: string;
@@ -10,13 +15,13 @@ const getters: GetterTree<State<any>, Getter<string, any>> = {
   categories: (state: State<any>) => {
     const categories: Category[] = [];
 
-    for (const article of state.articles) {
+    for (const topic of state.topics) {
       if (
-        !article.category ||
-        categories.find(category => category.text === article.category)
+        !topic.category ||
+        categories.find(category => category.text === topic.category)
       ) continue;
 
-      const text = article.category;
+      const text = topic.category;
 
       categories.push({
         text,

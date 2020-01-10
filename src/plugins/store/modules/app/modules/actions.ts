@@ -9,26 +9,35 @@ export enum ActionType {
 };
 
 const actions = {
-    fetchUser: () => {
-        return AxiosHandler.requestGet('fetchUser', {
+    fetchUser: (context: ActionContext<State<any>, State<any>>) => {
+        return AxiosHandler.requestGet('fetchArticles', {
 
-        });
-    },
-
-    fetchImages: (ctx: ActionContext<State<any>, State<any>>) => {
-        return AxiosHandler.requestGet('fetchImages', {
-            size: '1024*720'
         }).then(
             (response: void | AxiosResponse<any>) => {
-                ctx.commit(MutationType.SET_IMAGES, response);
+                context.commit(MutationType.SET_USER, response);
             }
         );
     },
 
-    fetchArticles: () => {
+    fetchImages: (context: ActionContext<State<any>, State<any>>) => {
+        return AxiosHandler.requestGet('fetchImages', {
+            size: '1024*720'
+
+        }).then(
+            (response: void | AxiosResponse<any>) => {
+                context.commit(MutationType.SET_IMAGES, response);
+            }
+        );
+    },
+
+    fetchArticles: (context: ActionContext<State<any>, State<any>>) => {
         return AxiosHandler.requestGet('fetchArticles', {
 
-        });
+        }).then(
+            (response: void | AxiosResponse<any>) => {
+                context.commit(MutationType.SET_ARTICLES, response);
+            }
+        );
     }
 };
 

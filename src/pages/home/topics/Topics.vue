@@ -7,4 +7,4 @@
 </template>
 
 <script lang="ts"
-        src="./Articles.ts" />
+        src="./Topics.ts" />

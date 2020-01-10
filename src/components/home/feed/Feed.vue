@@ -5,10 +5,10 @@
         <slot />
       </v-col>
 
-      <feed-card v-for="(article, i) in paginatedArticles"
-                 :key="article.title"
+      <feed-card v-for="(topic, i) in paginatedTopics"
+                 :key="topic.title"
                  :size="layout[i]"
-                 :value="article" />
+                 :value="topic" />
     </v-row>
 
     <v-row align="center">
