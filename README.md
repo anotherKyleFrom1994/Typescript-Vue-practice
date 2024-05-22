@@ -54,9 +54,3 @@ yarn install
 yarn serve
 ```
 
-
-# Author's contact info
-Email:  anotherKyleFrom1994@gmail.com 
-
-LinkedIn:  https://www.linkedin.com/in/kai-yi-l-4aa70b194
-
